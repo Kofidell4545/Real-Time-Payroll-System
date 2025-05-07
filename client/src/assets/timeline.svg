@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="100" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="timelineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00f0b5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f0ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <line x1="100" y1="50" x2="700" y2="50" stroke="url(#timelineGrad)" stroke-width="2"/>
+  <circle cx="100" cy="50" r="10" fill="url(#timelineGrad)"/>
+  <circle cx="400" cy="50" r="10" fill="url(#timelineGrad)"/>
+  <circle cx="700" cy="50" r="10" fill="url(#timelineGrad)"/>
+</svg>

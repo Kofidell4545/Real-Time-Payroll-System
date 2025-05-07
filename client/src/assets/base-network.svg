@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="baseGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f0b5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f0ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <g stroke="url(#baseGrad)" fill="none" stroke-width="2">
+    <circle cx="200" cy="150" r="50"/>
+    <circle cx="100" cy="100" r="30"/>
+    <circle cx="300" cy="100" r="30"/>
+    <circle cx="100" cy="200" r="30"/>
+    <circle cx="300" cy="200" r="30"/>
+  </g>
+  <g stroke="url(#baseGrad)" stroke-width="1">
+    <line x1="200" y1="150" x2="100" y2="100"/>
+    <line x1="200" y1="150" x2="300" y2="100"/>
+    <line x1="200" y1="150" x2="100" y2="200"/>
+    <line x1="200" y1="150" x2="300" y2="200"/>
+  </g>
+  <g fill="url(#baseGrad)">
+    <circle cx="200" cy="150" r="5"/>
+    <circle cx="100" cy="100" r="3"/>
+    <circle cx="300" cy="100" r="3"/>
+    <circle cx="100" cy="200" r="3"/>
+    <circle cx="300" cy="200" r="3"/>
+  </g>
+</svg>

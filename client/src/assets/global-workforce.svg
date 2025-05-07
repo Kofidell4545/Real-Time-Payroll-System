@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="800" height="600" viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#00f0b5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#00f0ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="400" cy="300" r="150" fill="none" stroke="url(#gradient)" stroke-width="2"/>
+  <g fill="url(#gradient)">
+    <circle cx="400" cy="300" r="8"/>
+    <circle cx="300" cy="250" r="6"/>
+    <circle cx="500" cy="350" r="6"/>
+    <circle cx="450" cy="200" r="6"/>
+    <circle cx="350" cy="400" r="6"/>
+  </g>
+  <g stroke="url(#gradient)" stroke-width="1">
+    <line x1="400" y1="300" x2="300" y2="250"/>
+    <line x1="400" y1="300" x2="500" y2="350"/>
+    <line x1="400" y1="300" x2="450" y2="200"/>
+    <line x1="400" y1="300" x2="350" y2="400"/>
+  </g>
+</svg>
