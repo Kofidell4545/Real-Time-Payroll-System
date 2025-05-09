@@ -18,28 +18,27 @@ import ProtectedRoute from './components/ProtectedRoute';
 
 // Styles
 import './styles/index.css';
+import './App.css';
 
 function App() {
   return (
-    <WagmiConfig config={config}>
-      <Router>
-        <div className="app">
-          <main className="main-content">
-            <Routes>
-              <Route path="/" element={<LandingPage />} />
-              <Route path="/learn-more" element={<LearnMore />} />
-              
-              {/* Protected Routes */}
-              <Route element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
-                <Route path="/employer" element={<EmployerDashboard />} />
-                <Route path="/employer/add-employees" element={<AddEmployeesPage />} />
-                <Route path="/employee" element={<EmployeeDashboard />} />
-              </Route>
-            </Routes>
-          </main>
-        </div>
-      </Router>
-    </WagmiConfig>
+    <div className="app">
+      <WagmiConfig config={config}>
+        <Router>
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/learn-more" element={<LearnMore />} />
+            
+            {/* Protected Routes */}
+            <Route element={<ProtectedRoute><DashboardLayout /></ProtectedRoute>}>
+              <Route path="/employer" element={<EmployerDashboard />} />
+              <Route path="/employer/add-employees" element={<AddEmployeesPage />} />
+              <Route path="/employee" element={<EmployeeDashboard />} />
+            </Route>
+          </Routes>
+        </Router>
+      </WagmiConfig>
+    </div>
   );
 }
 

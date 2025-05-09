@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useAccount, useDisconnect, useConnect } from 'wagmi';
+import { useAccount, useDisconnect } from 'wagmi';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHome,
@@ -13,16 +13,14 @@ import {
   faMoneyBill,
   faCog,
   faMoon,
-  faSignOutAlt,
-  faWallet
+  faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
 import './Sidebar.css';
 
 const Sidebar = () => {
   const [darkMode, setDarkMode] = useState(false);
   const { disconnect } = useDisconnect();
-  const { address, isConnected } = useAccount();
-  const { connect, connectors } = useConnect();
+  const { address } = useAccount();
 
   const handleLogout = () => {
     disconnect();
@@ -78,31 +76,20 @@ const Sidebar = () => {
       </div>
 
       <div className="user-profile">
-        {isConnected ? (
-          <>
-            <div className="profile-info">
-              <img
-                src={`https://api.dicebear.com/6.x/initials/svg?seed=${address}`}
-                alt="Profile"
-                className="profile-avatar"
-              />
-              <div className="profile-details">
-                <div className="profile-name">{address ? `${address.slice(0, 6)}...${address.slice(-4)}` : 'Connected'}</div>
-                <div className="profile-role">Admin Manager</div>
-              </div>
-            </div>
-            <button onClick={handleLogout} className="logout-button">
-              <FontAwesomeIcon icon={faSignOutAlt} /> Disconnect
-            </button>
-          </>
-        ) : (
-          <button
-            onClick={() => connect({ connector: connectors[0] })}
-            className="connect-wallet-button"
-          >
-            <FontAwesomeIcon icon={faWallet} /> Connect Wallet
-          </button>
-        )}
+        <div className="profile-info">
+          <img
+            src={`https://api.dicebear.com/6.x/initials/svg?seed=${address}`}
+            alt="Profile"
+            className="profile-avatar"
+          />
+          <div className="profile-details">
+            <div className="profile-name">Harper Nelson</div>
+            <div className="profile-role">Admin Manager</div>
+          </div>
+        </div>
+        <button onClick={handleLogout} className="logout-button">
+          <FontAwesomeIcon icon={faSignOutAlt} /> Log out
+        </button>
       </div>
     </nav>
   );

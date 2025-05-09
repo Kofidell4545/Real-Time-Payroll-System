@@ -184,29 +184,3 @@ input:checked + .slider:before {
 .menu-item.active svg {
   color: #18969b;
 }
-
-.connect-wallet-button {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  width: 100%;
-  padding: 0.75rem;
-  border: 2px solid #18969b;
-  background: #ffffff;
-  color: #18969b;
-  cursor: pointer;
-  border-radius: 6px;
-  font-size: 0.9375rem;
-  font-weight: 600;
-  transition: all 0.2s ease;
-}
-
-.connect-wallet-button:hover {
-  background: #18969b;
-  color: #ffffff;
-}
-
-.connect-wallet-button svg {
-  width: 1.25rem;
-  height: 1.25rem;
-}
