@@ -7,6 +7,8 @@ import GetStartedCards from '../components/GetStartedCards';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCamera, faLaptopCode, faHeadset, faStore, faHospital, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 import './LandingPage.css';
+import Footer from '../components/Footer';
+import Testimonials from '../components/Testimonials';
 
 const LandingPage = () => {
   const navigate = useNavigate();
@@ -121,6 +123,11 @@ const LandingPage = () => {
             <h3>Cost Effective</h3>
             <p>Save up to 80% on transaction fees compared to traditional systems</p>
           </div>
+          <div className="feature-card">
+            <div className="feature-icon">🌐</div>
+            <h3>Global Accessibility</h3>
+            <p>Access your payroll system from anywhere, manage your workforce globally</p>
+          </div>
         </div>
       </div>
 
@@ -128,45 +135,47 @@ const LandingPage = () => {
       <div className="results-section" id="results">
         <div className="section-header">
           <h2>Results</h2>
-          <p>What our platform can do for your business</p>
+          <p>Real impact for businesses and employees</p>
         </div>
-        <div className="stats-grid">
-          <div className="stat-card">
-            <div className="stat-number">99.9%</div>
-            <p>Payment Success Rate</p>
+        <div className="results-grid">
+          <div className="result-card">
+            <h3>Reduced Global Payroll Complexity</h3>
+            <div className="result-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M3 6h18M3 12h18M3 18h18" strokeLinecap="round" />
+              </svg>
+            </div>
+            <p>Businesses now seamlessly pay over 10,000 employees and freelancers globally—with zero delays and no reliance on banks or middlemen.</p>
           </div>
-          <div className="stat-card">
-            <div className="stat-number">80%</div>
-            <p>Cost Reduction</p>
+          <div className="result-card">
+            <h3>Empowered Employees with Financial Freedom</h3>
+            <div className="result-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M12 2v20M2 12h20" strokeLinecap="round" />
+              </svg>
+            </div>
+            <p>Workers stream their salaries in real time and instantly invest or save a portion through integrated DeFi tools—no more waiting for payday.</p>
           </div>
-          <div className="stat-card">
-            <div className="stat-number">3x</div>
-            <p>Faster Processing</p>
+          <div className="result-card">
+            <h3>Full Transparency & Audit-Ready Records</h3>
+            <div className="result-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M12 6v6l4 2" strokeLinecap="round" />
+              </svg>
+            </div>
+            <p>Companies report a 100% reduction in payroll disputes thanks to immutable, on-chain payment records and automated compliance.</p>
           </div>
         </div>
       </div>
 
-      {/* Testimonials Section */}
-      <div className="testimonials-section" id="testimonials">
-        <div className="section-header">
-          <h2>Testimonials</h2>
-          <p>What our clients say about us</p>
-        </div>
-        <div className="testimonial-card">
-          <p className="testimonial-text">
-            "RT Payroll System has revolutionized how we manage our global workforce. The real-time payment capabilities and cost savings are game-changing."
-          </p>
-          <div className="testimonial-author">
-            <div className="author-name">Jane Smith</div>
-            <div className="author-title">CFO, Tech Innovations Inc.</div>
-          </div>
-        </div>
-      </div>
+      <Testimonials />
 
       {/* Wave Background */}
           <div className="wave-background"></div>
           <div className="gradient-blur top-right"></div>
           <div className="gradient-blur bottom-left"></div>
+          <Footer />
         </>
       )}
     </div>

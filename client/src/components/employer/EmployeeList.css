@@ -1,0 +1,108 @@
+.employee-list {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.list-header {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #666;
+}
+
+.list-body {
+  margin-top: 1rem;
+}
+
+.list-item {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding: 1rem;
+  background: #fff;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+  align-items: center;
+  transition: transform 0.2s;
+}
+
+.list-item:hover {
+  transform: translateX(4px);
+}
+
+.employee-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.employee-name {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.employee-address {
+  font-size: 0.8rem;
+  color: #666;
+  font-family: monospace;
+}
+
+.status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.status.active {
+  background: #e6f4ea;
+  color: #137333;
+}
+
+.status.inactive {
+  background: #fce8e6;
+  color: #c5221f;
+}
+
+.actions button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  background: #0052ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.actions button:hover:not(:disabled) {
+  background: #003cc7;
+}
+
+.actions button:disabled {
+  background: #e0e0e0;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .list-header,
+  .list-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .list-header > div:not(:first-child),
+  .list-item > div:not(:first-child) {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .list-header > div:not(:first-child)::before {
+    content: attr(data-label);
+    font-weight: 500;
+  }
+}

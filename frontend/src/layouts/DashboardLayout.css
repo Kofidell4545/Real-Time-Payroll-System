@@ -1,0 +1,11 @@
+.dashboard-layout {
+  min-height: 100vh;
+  background: #f8f9fa;
+}
+
+.dashboard-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  margin-top: 2rem;
+}
