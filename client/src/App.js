@@ -1,7 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { WagmiConfig } from 'wagmi';
-import { config } from './config/wagmi';
+import { WagmiConfig, createConfig, configureChains } from 'wagmi';
+import { mainnet, base } from 'wagmi/chains';
+import { publicProvider } from 'wagmi/providers/public';
+import { ConnectKitProvider, getDefaultConfig } from 'connectkit';
+import { WalletProvider } from './contexts/WalletContext';
 
 // Pages
 import LandingPage from './pages/LandingPage';
@@ -21,9 +24,19 @@ import './styles/index.css';
 import './App.css';
 
 function App() {
+  const config = createConfig(
+    getDefaultConfig({
+      appName: 'Real Time Payroll System',
+      chains: [base, mainnet],
+      walletConnectProjectId: process.env.REACT_APP_WALLETCONNECT_PROJECT_ID || '',
+    })
+  );
+
   return (
     <div className="app">
       <WagmiConfig config={config}>
+        <ConnectKitProvider theme="auto">
+          <WalletProvider>
         <Router>
           <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -37,6 +50,8 @@ function App() {
             </Route>
           </Routes>
         </Router>
+          </WalletProvider>
+        </ConnectKitProvider>
       </WagmiConfig>
     </div>
   );

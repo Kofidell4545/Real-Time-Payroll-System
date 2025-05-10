@@ -1,15 +1,10 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { useAccount, useConnect, useDisconnect } from 'wagmi';
-import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
+import { ConnectKitButton } from 'connectkit';
 import './Navigation.css';
 
 const Navigation = () => {
-  const { address, isConnected } = useAccount();
-  const { connect } = useConnect({
-    connector: new MetaMaskConnector(),
-  });
-  const { disconnect } = useDisconnect();
+
   const location = useLocation();
 
   return (
@@ -32,20 +27,7 @@ const Navigation = () => {
       </div>
 
       <div className="nav-wallet">
-        {isConnected ? (
-          <div className="wallet-info">
-            <span className="wallet-address">
-              {`${address.slice(0, 6)}...${address.slice(-4)}`}
-            </span>
-            <button onClick={() => disconnect()} className="disconnect-button">
-              Disconnect
-            </button>
-          </div>
-        ) : (
-          <button onClick={() => connect()} className="connect-button">
-            Connect Wallet
-          </button>
-        )}
+        <ConnectKitButton />
       </div>
     </nav>
   );

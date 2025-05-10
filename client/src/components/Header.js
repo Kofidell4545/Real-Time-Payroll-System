@@ -1,16 +1,9 @@
 import React from 'react';
-import { useConnect } from 'wagmi';
-import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
+import { ConnectKitButton } from 'connectkit';
 import './Header.css';
 
 const Header = () => {
-  const { connect } = useConnect({
-    connector: new MetaMaskConnector(),
-  });
 
-  const handleConnectWallet = () => {
-    connect();
-  };
 
   return (
     <header className="header">
@@ -25,12 +18,7 @@ const Header = () => {
           <a href="#testimonials" className="nav-link">Testimonials</a>
         </nav>
         <div className="wallet-section">
-          <button 
-            className="connect-wallet-btn" 
-            onClick={handleConnectWallet}
-          >
-            Connect Wallet
-          </button>
+          <ConnectKitButton />
         </div>
       </div>
     </header>

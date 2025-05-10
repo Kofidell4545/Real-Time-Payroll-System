@@ -1,0 +1,31 @@
+.page-container {
+  background-color: #0d0d1f;
+  min-height: 100vh;
+  min-width: 100%;
+  padding: 1.5rem;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 240px; /* Sidebar width */
+  overflow-y: auto;
+}
+
+.page-header {
+  margin-bottom: 2rem;
+}
+
+.page-header h1 {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.page-content {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+}

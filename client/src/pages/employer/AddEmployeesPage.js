@@ -1,11 +1,17 @@
 import React from 'react';
-import AddEmployees from '../../components/employer/AddEmployees';
+import AddEmployeeForm from '../../components/employer/AddEmployeeForm';
+import { Box, Container, Typography } from '@mui/material';
+import '../../styles/PageLayout.css';
 
 const AddEmployeesPage = () => {
   return (
     <div className="page-container">
-      <h1>Add Employees</h1>
-      <AddEmployees />
+      <div className="page-header">
+        <h1>Add Employees</h1>
+      </div>
+      <div className="page-content">
+        <AddEmployeeForm />
+      </div>
     </div>
   );
 };

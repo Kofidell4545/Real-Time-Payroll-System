@@ -1,21 +1,17 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useConnect, useAccount } from 'wagmi';
-import { InjectedConnector } from 'wagmi/connectors/injected';
+import { useAccount } from 'wagmi';
+import { ConnectKitButton } from 'connectkit';
 import './GetStartedCards.css';
 
 const GetStartedCards = () => {
   const navigate = useNavigate();
-  const { connect } = useConnect({
-    connector: new InjectedConnector(),
-  });
   const { isConnected } = useAccount();
 
   const handleLogin = (path) => {
-    if (!isConnected) {
-      connect();
+    if (isConnected) {
+      navigate(path);
     }
-    navigate(path);
   };
 
   return (
@@ -30,12 +26,13 @@ const GetStartedCards = () => {
           <p className="card-subtitle">
             Access your employee dashboard to manage your payroll and benefits.
           </p>
-          <button 
-            className="login-btn" 
-            onClick={() => handleLogin('/employee')}
-          >
-            {isConnected ? 'Login as Employee' : 'Connect Wallet'}
-          </button>
+          {isConnected ? (
+            <button onClick={() => handleLogin('/employee')} className="get-started-btn">
+              Get Started
+            </button>
+          ) : (
+            <ConnectKitButton />
+          )}
         </div>
 
         <div className="card employer-card">
@@ -43,12 +40,13 @@ const GetStartedCards = () => {
           <p className="card-subtitle">
             Manage your organization's payroll and employee benefits.
           </p>
-          <button 
-            className="login-btn" 
-            onClick={() => handleLogin('/employer')}
-          >
-            {isConnected ? 'Login as Employer' : 'Connect Wallet'}
-          </button>
+          {isConnected ? (
+            <button onClick={() => handleLogin('/employer')} className="login-btn">
+              Login as Employer
+            </button>
+          ) : (
+            <ConnectKitButton />
+          )}
         </div>
       </div>
     </div>

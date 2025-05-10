@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { useAccount, useConnect } from 'wagmi';
-import { MetaMaskConnector } from 'wagmi/connectors/metaMask';
+import { useAccount } from 'wagmi';
 import Header from '../components/Header';
 import GetStartedCards from '../components/GetStartedCards';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -12,17 +11,12 @@ import Testimonials from '../components/Testimonials';
 
 const LandingPage = () => {
   const navigate = useNavigate();
-  const { isConnected } = useAccount();
-  const { connect } = useConnect({
-    connector: new MetaMaskConnector(),
-  });
+  
   const [showGetStarted, setShowGetStarted] = useState(false);
   
   const handleConnect = (userType) => {
-    if (!isConnected) {
-      connect();
-    } else {
-      navigate(userType === 'employer' ? '/employer' : '/employee');
+    if (isConnected) {
+      navigate(`/${userType}`);
     }
   };
 

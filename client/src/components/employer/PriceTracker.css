@@ -1,0 +1,71 @@
+.price-tracker {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.price-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1rem;
+  min-width: 200px;
+  transition: all 0.3s ease;
+}
+
+.price-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateY(-2px);
+}
+
+.token-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+}
+
+.token-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.token-name {
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.price-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.current-price {
+  color: #fff;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.price-change {
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.price-change.positive {
+  color: #4caf50;
+}
+
+.price-change.negative {
+  color: #f44336;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .price-card {
+    background: rgba(255, 255, 255, 0.03);
+  }
+}
