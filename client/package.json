@@ -4,9 +4,13 @@
   "private": true,
   "dependencies": {
     "@coinbase/wallet-sdk": "^4.3.2",
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
+    "@mui/icons-material": "^7.1.0",
+    "@mui/material": "^7.1.0",
     "@supabase/supabase-js": "^2.49.4",
     "@testing-library/jest-dom": "^5.17.0",
     "@testing-library/react": "^13.4.0",
@@ -20,6 +24,7 @@
     "react-icons": "^5.5.0",
     "react-router-dom": "^6.16.0",
     "react-scripts": "5.0.1",
+    "recharts": "^2.15.3",
     "viem": "^1.21.4",
     "wagmi": "^1.4.12",
     "web-vitals": "^2.1.4"

@@ -77,18 +77,13 @@ const Sidebar = () => {
 
       <div className="user-profile">
         <div className="profile-info">
-          <img
-            src={`https://api.dicebear.com/6.x/initials/svg?seed=${address}`}
-            alt="Profile"
-            className="profile-avatar"
-          />
           <div className="profile-details">
-            <div className="profile-name">Harper Nelson</div>
-            <div className="profile-role">Admin Manager</div>
+            <div className="profile-name">{`${address.slice(0, 6)}...${address.slice(-4)}`}</div>
+            <div className="profile-role">Connected Wallet</div>
           </div>
         </div>
         <button onClick={handleLogout} className="logout-button">
-          <FontAwesomeIcon icon={faSignOutAlt} /> Log out
+          <FontAwesomeIcon icon={faSignOutAlt} /> Disconnect
         </button>
       </div>
     </nav>
