@@ -36,6 +36,11 @@
     "wagmi": "^1.4.12",
     "web-vitals": "^2.1.4"
   },
+  "resolutions": {
+    "@mui/material/@emotion/react": "^11.11.3",
+    "@mui/material/@emotion/styled": "^11.11.0",
+    "wagmi/viem": "^1.21.4"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
@@ -62,5 +67,8 @@
   },
   "devDependencies": {
     "typescript": "^4.9.5"
+  },
+  "engines": {
+    "node": ">=16.0.0"
   }
 }
