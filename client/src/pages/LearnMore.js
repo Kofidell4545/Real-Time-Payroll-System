@@ -1,32 +1,28 @@
 import React, { useEffect } from 'react';
 import './LearnMore.css';
-import { ReactComponent as GlobalWorkforce } from '../assets/global-workforce.svg';
-import { ReactComponent as ComparisonOld } from '../assets/comparison-old.svg';
-import { ReactComponent as ComparisonNew } from '../assets/comparison-new.svg';
-import { ReactComponent as BaseNetwork } from '../assets/base-network.svg';
-import { ReactComponent as Timeline } from '../assets/timeline.svg';
-import { ReactComponent as ChecklistIcon } from '../assets/checklist.svg';
+import GlobalWorkforce from '../assets/global-workforce.svg';
+import ComparisonOld from '../assets/comparison-old.svg';
+import ComparisonNew from '../assets/comparison-new.svg';
+import BaseNetwork from '../assets/base-network.svg';
+import Timeline from '../assets/timeline.svg';
+import ChecklistIcon from '../assets/checklist.svg';
 
 const LearnMore = () => {
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.1 });
 
-    document.querySelectorAll('.animate-on-scroll').forEach((el) => {
-      observer.observe(el);
+    document.querySelectorAll('section').forEach((section) => {
+      observer.observe(section);
     });
 
     return () => observer.disconnect();
   }, []);
-
   return (
     <div className="learn-more-page">
       <section className="what-is animate-on-scroll fade-in">
@@ -39,7 +35,7 @@ const LearnMore = () => {
           </p>
         </div>
         <div className="visual">
-          <GlobalWorkforce className="illustration" />
+          <img src={GlobalWorkforce} alt="Global Workforce" className="illustration" />
         </div>
       </section>
 
@@ -55,11 +51,11 @@ const LearnMore = () => {
         </div>
         <div className="comparison">
           <div className="old-system">
-            <ComparisonOld className="illustration" />
+            <img src={ComparisonOld} alt="Traditional System" className="illustration" />
             <span>Traditional System</span>
           </div>
           <div className="new-system">
-            <ComparisonNew className="illustration" />
+            <img src={ComparisonNew} alt="Blockchain Solution" className="illustration" />
             <span>Blockchain Solution</span>
           </div>
         </div>
@@ -75,14 +71,14 @@ const LearnMore = () => {
           </p>
         </div>
         <div className="network-visual">
-          <BaseNetwork className="network-animation" />
+          <img src={BaseNetwork} alt="Base Network" className="network-animation" />
         </div>
       </section>
 
       <section className="how-works animate-on-scroll">
         <h2>How It Works</h2>
         <div className="timeline">
-          <Timeline className="timeline-illustration" />
+          <img src={Timeline} alt="Timeline" className="timeline-illustration" />
           <div className="steps">
             <div className="step">
               <h3>1. Onboarding</h3>
@@ -104,23 +100,23 @@ const LearnMore = () => {
         <h2>Why It Stands Out</h2>
         <div className="benefits">
           <div className="benefit-item">
-            <ChecklistIcon className="check-icon" />
+            <img src={ChecklistIcon} alt="Check" className="check-icon" />
             <span>Cut operational costs</span>
           </div>
           <div className="benefit-item">
-            <ChecklistIcon className="check-icon" />
+            <img src={ChecklistIcon} alt="Check" className="check-icon" />
             <span>Real-time or scheduled payments</span>
           </div>
           <div className="benefit-item">
-            <ChecklistIcon className="check-icon" />
+            <img src={ChecklistIcon} alt="Check" className="check-icon" />
             <span>Salary streaming capabilities</span>
           </div>
           <div className="benefit-item">
-            <ChecklistIcon className="check-icon" />
+            <img src={ChecklistIcon} alt="Check" className="check-icon" />
             <span>Integrated DeFi savings/investments</span>
           </div>
           <div className="benefit-item">
-            <ChecklistIcon className="check-icon" />
+            <img src={ChecklistIcon} alt="Check" className="check-icon" />
             <span>One-click mass payouts</span>
           </div>
         </div>

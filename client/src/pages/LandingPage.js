@@ -11,6 +11,7 @@ import Testimonials from '../components/Testimonials';
 
 const LandingPage = () => {
   const navigate = useNavigate();
+  const { isConnected } = useAccount() || {};
   
   const [showGetStarted, setShowGetStarted] = useState(false);
   
@@ -57,7 +58,7 @@ const LandingPage = () => {
             <button className="get-started" onClick={handleGetStarted}>
               Get Started
             </button>
-            <button className="learn-more" onClick={() => navigate('/learn-more')}>
+            <button className="learn-more" onClick={() => navigate('/learn')}>
               Learn more
             </button>
           </div>
@@ -165,8 +166,6 @@ const LandingPage = () => {
 
       <Testimonials />
 
-      {/* Wave Background */}
-          <div className="wave-background"></div>
           <div className="gradient-blur top-right"></div>
           <div className="gradient-blur bottom-left"></div>
           <Footer />

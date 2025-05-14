@@ -1,133 +1,200 @@
 .employee-dashboard {
   padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
 .dashboard-header {
   margin-bottom: 2rem;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
 }
 
-.dashboard-header h1 {
-  font-size: 2rem;
-  color: #333;
-  margin-bottom: 0.5rem;
+.header-title {
+  color: #0d0d1f;
+  margin-bottom: 1.5rem !important;
 }
 
-.welcome-text {
-  color: #666;
-  font-size: 1.1rem;
+.header-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+}
+
+.stat-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.stat-label {
+  color: #637381;
+  font-weight: 500 !important;
+}
+
+.stat-value {
+  color: #18969b !important;
+  font-weight: 600 !important;
 }
 
 .dashboard-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2rem;
 }
 
 .dashboard-card {
-  background: white;
-  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.dashboard-card:hover {
+  transform: translateY(-4px);
+}
+
+.card-header {
   padding: 1.5rem;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.dashboard-card h3 {
-  color: #333;
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-.balance-amount {
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #03d5a0;
-  margin-bottom: 1rem;
-}
-
-.balance-info {
-  display: flex;
-  justify-content: space-between;
-  color: #666;
-}
-
-.payment-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.payment-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
-}
-
-.payment-date {
-  color: #666;
-}
-
-.payment-amount {
-  color: #333;
-  font-weight: 500;
-}
-
-.action-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.action-btn {
-  padding: 0.8rem;
-  border: none;
-  border-radius: 8px;
-  background: #03d5a0;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.action-btn:hover {
-  background: #02c091;
-  transform: translateY(-2px);
-}
-
-.benefits-list {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.benefit-item {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.5rem 0;
-  border-bottom: 1px solid #eee;
 }
 
-.benefit-name {
-  color: #333;
+.card-header h6 {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #0d0d1f;
 }
 
-.benefit-status {
-  padding: 0.25rem 0.75rem;
+.card-icon {
+  color: #18969b;
+}
+
+.card-content {
+  padding: 1.5rem;
+}
+
+/* Salary History Card */
+.salary-history .chart-container {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(24, 150, 155, 0.05);
   border-radius: 12px;
-  font-size: 0.9rem;
 }
 
-.benefit-status.active {
-  background: #e6f9f3;
-  color: #03d5a0;
+.transaction-list {
+  margin-top: 1.5rem;
+}
+
+.transaction-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.75rem 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.transaction-date {
+  color: #637381;
+}
+
+.transaction-amount {
+  color: #0d0d1f;
+  font-weight: 500;
+}
+
+/* Compound Lending Card */
+.lending-card .description {
+  color: #637381;
+  margin-bottom: 1.5rem;
+}
+
+.apy-badge {
+  background: rgba(24, 150, 155, 0.1);
+  color: #18969b;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+}
+
+.lending-controls {
+  margin: 1.5rem 0;
+}
+
+.lending-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.lending-stats .stat {
+  background: rgba(24, 150, 155, 0.05);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+/* Insurance Card */
+.insurance-card .description {
+  color: #637381;
+  margin-bottom: 1.5rem;
+}
+
+.insurance-details {
+  display: grid;
+  gap: 1rem;
+}
+
+.detail-item {
+  background: rgba(24, 150, 155, 0.05);
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+.status-badge.active {
+  background: rgba(24, 150, 155, 0.1);
+  color: #18969b;
+}
+
+.status-badge.inactive {
+  background: rgba(99, 115, 129, 0.1);
+  color: #637381;
 }
 
 @media (max-width: 768px) {
+  .employee-dashboard {
+    padding: 1rem;
+  }
+
+  .dashboard-header {
+    padding: 1.5rem;
+  }
+
+  .header-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
   .dashboard-grid {
     grid-template-columns: 1fr;
   }
-  
-  .employee-dashboard {
-    padding: 1rem;
+
+  .lending-stats {
+    grid-template-columns: 1fr;
   }
 }

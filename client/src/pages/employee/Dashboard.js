@@ -1,72 +1,27 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Layout from '../../components/employee/Layout';
+import Overview from './Overview';
+import Analytics from './Analytics';
+import Lending from './Lending';
+import Insurance from './Insurance';
+import History from './History';
+import Profile from './Profile';
+
 import './Dashboard.css';
 
 const EmployeeDashboard = () => {
   return (
-    <div className="employee-dashboard">
-      <div className="dashboard-header">
-        <h1>Employee Dashboard</h1>
-        <div className="user-info">
-          <span className="welcome-text">Welcome back, Employee</span>
-        </div>
-      </div>
-
-      <div className="dashboard-grid">
-        <div className="dashboard-card">
-          <h3>Current Balance</h3>
-          <div className="balance-amount">$2,450.00</div>
-          <div className="balance-info">
-            <span className="info-label">Next Payment:</span>
-            <span className="info-value">May 15, 2025</span>
-          </div>
-        </div>
-
-        <div className="dashboard-card">
-          <h3>Payment History</h3>
-          <div className="payment-list">
-            <div className="payment-item">
-              <span className="payment-date">Apr 30, 2025</span>
-              <span className="payment-amount">$2,450.00</span>
-            </div>
-            <div className="payment-item">
-              <span className="payment-date">Mar 31, 2025</span>
-              <span className="payment-amount">$2,450.00</span>
-            </div>
-            <div className="payment-item">
-              <span className="payment-date">Feb 28, 2025</span>
-              <span className="payment-amount">$2,450.00</span>
-            </div>
-          </div>
-        </div>
-
-        <div className="dashboard-card">
-          <h3>Quick Actions</h3>
-          <div className="action-buttons">
-            <button className="action-btn">Request Advance</button>
-            <button className="action-btn">View Pay Stubs</button>
-            <button className="action-btn">Update Info</button>
-          </div>
-        </div>
-
-        <div className="dashboard-card">
-          <h3>Benefits Overview</h3>
-          <div className="benefits-list">
-            <div className="benefit-item">
-              <span className="benefit-name">Health Insurance</span>
-              <span className="benefit-status active">Active</span>
-            </div>
-            <div className="benefit-item">
-              <span className="benefit-name">401(k)</span>
-              <span className="benefit-status active">Active</span>
-            </div>
-            <div className="benefit-item">
-              <span className="benefit-name">Dental Coverage</span>
-              <span className="benefit-status active">Active</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Overview />} />
+        <Route path="analytics" element={<Analytics />} />
+        <Route path="lending" element={<Lending />} />
+        <Route path="insurance" element={<Insurance />} />
+        <Route path="history" element={<History />} />
+        <Route path="profile" element={<Profile />} />
+      </Route>
+    </Routes>
   );
 };
 

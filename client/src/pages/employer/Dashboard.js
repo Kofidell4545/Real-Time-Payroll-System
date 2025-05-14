@@ -1,14 +1,21 @@
 import React from 'react';
-import DashboardStats from '../../components/employer/DashboardStats';
-import './Dashboard.css';
+import { Routes, Route } from 'react-router-dom';
+import Layout from '../../components/employer/Layout';
+import Overview from './Overview';
+import AddEmployees from './AddEmployees';
+import Ledger from './Ledger';
+import Profile from './Profile';
 
 const EmployerDashboard = () => {
   return (
-    <div className="employer-dashboard">
-      <div className="dashboard-content">
-        <DashboardStats />
-      </div>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Overview />} />
+        <Route path="add-employees" element={<AddEmployees />} />
+        <Route path="ledger" element={<Ledger />} />
+        <Route path="profile" element={<Profile />} />
+      </Route>
+    </Routes>
   );
 };
 

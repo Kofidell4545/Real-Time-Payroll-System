@@ -2,6 +2,7 @@ import React from 'react';
 import AddEmployeeForm from '../../components/employer/AddEmployeeForm';
 import { Box, Container, Typography } from '@mui/material';
 import '../../styles/PageLayout.css';
+import './AddEmployeesPage.css';
 
 const AddEmployeesPage = () => {
   return (

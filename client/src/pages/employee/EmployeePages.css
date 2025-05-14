@@ -1,0 +1,160 @@
+.analytics-page,
+.lending-page,
+.insurance-page,
+.history-page,
+.profile-page {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.analytics-page-title {
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title-icon {
+  color: #18969b;
+}
+
+.dashboard-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.card-icon {
+  margin-right: 0.5rem;
+  color: #18969b;
+}
+
+/* Lending Page Styles */
+.lending-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.lending-controls {
+  margin: 2rem 0;
+}
+
+.lending-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.apy-badge {
+  background: rgba(24, 150, 155, 0.2);
+  color: #18969b;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.interest-list {
+  margin-top: 1rem;
+}
+
+.interest-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.interest-amount {
+  color: #18969b;
+  font-weight: 600;
+}
+
+/* Insurance Page Styles */
+.insurance-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.insurance-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.detail-item {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.status-badge.active {
+  background: rgba(24, 150, 155, 0.2);
+  color: #18969b;
+}
+
+.status-badge.inactive {
+  background: rgba(255, 255, 255, 0.1);
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.insurance-actions {
+  margin-top: 1.5rem;
+}
+
+.coverage-list {
+  margin-top: 1rem;
+}
+
+.coverage-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.coverage-details {
+  display: flex;
+  gap: 1rem;
+}
+
+.coverage-amount {
+  color: #18969b;
+  font-weight: 600;
+}
+
+.coverage-premium {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.chart-container {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}

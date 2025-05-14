@@ -215,3 +215,47 @@
 .cancel-button:hover {
   background: rgba(255, 255, 255, 0.1);
 }
+
+.transaction-button {
+  background-color: #2196F3;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.transaction-button:hover {
+  background-color: #1976D2;
+}
+
+.transaction-button:disabled {
+  background-color: rgba(33, 150, 243, 0.5);
+  cursor: not-allowed;
+}
+
+.transaction-button svg {
+  font-size: 18px;
+}
+
+.transaction-status {
+  width: 100%;
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: rgba(46, 125, 50, 0.1);
+  color: #81c784;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.transaction-status.error {
+  background-color: rgba(198, 40, 40, 0.1);
+  color: #e57373;
+}

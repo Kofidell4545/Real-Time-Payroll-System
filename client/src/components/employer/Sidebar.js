@@ -4,14 +4,9 @@ import { useAccount, useDisconnect } from 'wagmi';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
   faHome,
-  faShoppingCart,
-  faListAlt,
-  faBox,
   faUsers,
-  faPercent,
   faBook,
-  faMoneyBill,
-  faCog,
+  faUser,
   faMoon,
   faSignOutAlt
 } from '@fortawesome/free-solid-svg-icons';
@@ -29,48 +24,46 @@ const Sidebar = () => {
   return (
     <nav className="sidebar">
       <div className="sidebar-content">
-        <div className="menu-items">
-          <Link to="/employer" className="menu-item">
-            <FontAwesomeIcon icon={faHome} /> Dashboard
-          </Link>
-          
-          
-          
-          <Link to="/employer/employees" className="menu-item">
-            <FontAwesomeIcon icon={faUsers} /> List of Employees
-          </Link>
-          <Link to="/employer/add-employees" className="menu-item">
-            <FontAwesomeIcon icon={faUsers} /> Add Employees
-          </Link>
-
+        <div className="logo-section">
+          <h1>RT.PayRoll</h1>
         </div>
 
-        <div className="section-title">PAYMENTS</div>
-        <div className="menu-items">
-          <Link to="/employer/ledger" className="menu-item">
-            <FontAwesomeIcon icon={faBook} /> Ledger
-          </Link>
-          <Link to="/employer/taxes" className="menu-item">
-            <FontAwesomeIcon icon={faMoneyBill} /> Taxes
-          </Link>
-        </div>
+        <div className="menu-section">
+          <div className="menu-items">
+            <Link to="/employer" className="menu-item">
+              <FontAwesomeIcon icon={faHome} />
+              <span>Dashboard</span>
+            </Link>
+            
+            <Link to="/employer/add-employees" className="menu-item">
+              <FontAwesomeIcon icon={faUsers} />
+              <span>Add Employees</span>
+            </Link>
 
-        <div className="section-title">SYSTEM</div>
-        <div className="menu-items">
-          <Link to="/employer/settings" className="menu-item">
-            <FontAwesomeIcon icon={faCog} /> Settings
-          </Link>
-          <div className="menu-item dark-mode-toggle">
-            <FontAwesomeIcon icon={faMoon} />
-            Dark mode
-            <label className="switch">
-              <input
-                type="checkbox"
-                checked={darkMode}
-                onChange={() => setDarkMode(!darkMode)}
-              />
-              <span className="slider round"></span>
-            </label>
+            <Link to="/employer/ledger" className="menu-item">
+              <FontAwesomeIcon icon={faBook} />
+              <span>Ledger</span>
+            </Link>
+
+            <Link to="/employer/profile" className="menu-item">
+              <FontAwesomeIcon icon={faUser} />
+              <span>Profile</span>
+            </Link>
+          </div>
+
+          <div className="theme-toggle">
+            <div className="menu-item dark-mode-toggle">
+              <FontAwesomeIcon icon={faMoon} />
+              <span>Dark mode</span>
+              <label className="switch">
+                <input
+                  type="checkbox"
+                  checked={darkMode}
+                  onChange={() => setDarkMode(!darkMode)}
+                />
+                <span className="slider round"></span>
+              </label>
+            </div>
           </div>
         </div>
       </div>

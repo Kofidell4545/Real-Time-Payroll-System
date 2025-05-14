@@ -1,11 +1,12 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { ConnectKitButton } from 'connectkit';
+import { useAccount } from 'wagmi';
 import './Navigation.css';
 
 const Navigation = () => {
-
   const location = useLocation();
+  const { isConnected } = useAccount();
 
   return (
     <nav className="navigation">

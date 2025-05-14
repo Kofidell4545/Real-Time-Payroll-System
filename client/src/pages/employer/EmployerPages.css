@@ -1,0 +1,140 @@
+.add-employees-page {
+  padding: 2rem;
+  color: #fff;
+}
+
+.page-title {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  color: #fff;
+}
+
+/* Payment Configuration Section */
+.config-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.section-title {
+  color: #18969b;
+  margin-bottom: 1.5rem;
+}
+
+.payment-config {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.config-select {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+
+/* Employee Details Section */
+.employees-section {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.employee-details-container {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.employee-header {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1.5rem;
+}
+
+.delete-btn {
+  color: #f44336 !important;
+}
+
+.employee-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.employee-input {
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.employee-input {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+}
+
+/* Form Actions */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+}
+
+.add-employee-btn {
+  background-color: #2e7d32 !important;
+  text-transform: none !important;
+}
+
+.right-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.cancel-btn {
+  color: #fff !important;
+  border-color: rgba(255, 255, 255, 0.3) !important;
+  text-transform: none !important;
+}
+
+.save-btn {
+  background-color: #1976d2 !important;
+  text-transform: none !important;
+}
+
+.transaction-btn {
+  background-color: #2196f3 !important;
+  text-transform: none !important;
+}
+
+/* MUI Overrides */
+.MuiOutlinedInput-root {
+  color: #fff !important;
+}
+
+.MuiInputLabel-root {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.MuiOutlinedInput-notchedOutline {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.MuiSelect-icon {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.MuiMenuItem-root {
+  color: #fff !important;
+  background-color: #1a1a2e !important;
+}
+
+.MuiMenu-paper {
+  background-color: #1a1a2e !important;
+}
+
+.MuiMenuItem-root:hover {
+  background-color: rgba(255, 255, 255, 0.05) !important;
+}

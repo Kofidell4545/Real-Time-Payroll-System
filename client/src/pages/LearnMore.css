@@ -1,10 +1,27 @@
 /* Global Styles */
+.learn-more-page html,
+.learn-more-page body,
+.learn-more-page #root,
+.learn-more-page .app-container,
+.learn-more-page .page-container {
+  background-color: #0a0b0d !important;
+  margin: 0;
+  padding: 0;
+}
+
 .learn-more-page {
   width: 100%;
-  background-color: #0a0b0d;
+  min-height: 100vh;
+  background-color: #0a0b0d !important;
   color: white;
   font-family: 'Inter', sans-serif;
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+.learn-more-page .app-container,
+.learn-more-page .page-container {
+  background-color: #0a0b0d !important;
 }
 
 section {
@@ -14,6 +31,9 @@ section {
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
+  background-color: #0a0b0d;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 section.visible {
@@ -41,7 +61,9 @@ p {
 .illustration {
   width: 100%;
   height: auto;
-  max-height: 400px;
+  max-width: 500px;
+  display: block;
+  margin: 0 auto;
 }
 
 /* What Is Section */
@@ -50,6 +72,7 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  background-color: #0a0b0d;
 }
 
 /* Problem Solve Section */
@@ -58,6 +81,7 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  background-color: #0a0b0d;
 }
 
 .comparison {
@@ -84,6 +108,7 @@ p {
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
+  background-color: #0a0b0d;
 }
 
 .network-animation {
@@ -94,6 +119,7 @@ p {
 /* How Works Section */
 .timeline {
   margin-top: 4rem;
+  background-color: #0a0b0d;
 }
 
 .steps {
@@ -106,11 +132,9 @@ p {
 .step {
   text-align: center;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
 }
 
 .step h3 {
@@ -120,11 +144,19 @@ p {
 }
 
 /* Stands Out Section */
+.benefits-section {
+  padding: 4rem 0;
+  text-align: center;
+  animation: fadeIn 1s ease-out 0.9s both;
+  background-color: #0a0b0d;
+}
+
 .benefits {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
   margin-top: 3rem;
+  background-color: #0a0b0d;
 }
 
 .benefit-item {
@@ -132,7 +164,7 @@ p {
   align-items: center;
   gap: 1rem;
   padding: 1.5rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.03);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 12px;
   opacity: 0;
@@ -141,7 +173,7 @@ p {
 }
 
 .benefit-item span {
-  color: rgb(6, 6, 6);
+  color: rgba(255, 255, 255, 0.9);
   font-size: 1.1rem;
   font-weight: 500;
 }
@@ -154,7 +186,7 @@ p {
 .check-icon {
   width: 24px;
   height: 24px;
-  color: #00f0b5;
+  filter: invert(80%) sepia(68%) saturate(456%) hue-rotate(116deg) brightness(101%) contrast(101%);
 }
 
 /* Animations */
