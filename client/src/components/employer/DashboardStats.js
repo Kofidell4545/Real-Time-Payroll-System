@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { styled } from '@mui/material/styles';
-import { Box, Grid, Typography, IconButton, Tooltip } from '@mui/material';
 import { TrendingUp, TrendingDown } from '@mui/icons-material';
 import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
 import PriceTracker from './PriceTracker';
@@ -8,7 +6,7 @@ import './DashboardStats.css';
 
 const DashboardStats = () => {
   const [timeRange, setTimeRange] = useState('24H');
-  const [selectedMetric, setSelectedMetric] = useState('all');
+  const setSelectedMetric = useState('all')[1];
 
   const generateDetailedChartData = (days) => {
     const data = [];

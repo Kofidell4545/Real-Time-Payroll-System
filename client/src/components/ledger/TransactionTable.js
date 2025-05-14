@@ -11,9 +11,7 @@ import {
   Collapse,
   Box,
   IconButton,
-  Typography,
-  Chip,
-  useTheme,
+  Typography
 } from '@mui/material';
 import {
   KeyboardArrowDown,
@@ -23,7 +21,6 @@ import {
 
 const Row = ({ row }) => {
   const [open, setOpen] = useState(false);
-  const theme = useTheme();
 
   const copyToClipboard = (text) => {
     navigator.clipboard.writeText(text);

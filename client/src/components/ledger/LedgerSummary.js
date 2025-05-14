@@ -3,8 +3,6 @@ import { Grid, Paper, Box, Typography, useTheme } from '@mui/material';
 import { AccountBalanceWallet, LocalGasStation, People } from '@mui/icons-material';
 
 const SummaryCard = ({ title, value, icon, color }) => {
-  const theme = useTheme();
-  
   return (
     <Paper
       elevation={0}
