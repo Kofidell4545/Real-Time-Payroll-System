@@ -24,7 +24,7 @@ const baseSepoliaChain = {
 }
 
 const { chains, publicClient, webSocketPublicClient } = configureChains(
-  [sepolia],
+  [baseSepoliaChain],
   [publicProvider()],
 )
 

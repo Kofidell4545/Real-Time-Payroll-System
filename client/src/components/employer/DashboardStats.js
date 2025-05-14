@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { useAccount, useContractRead } from 'wagmi';
-import { CONTRACT_ADDRESSES, CONTRACT_ABIS } from '../../config/contracts';
-import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
+import React, { useState } from 'react';
+import { styled } from '@mui/material/styles';
 import { Box, Grid, Typography, IconButton, Tooltip } from '@mui/material';
-import { TrendingUp, TrendingDown, AccessTime, Group, AccountBalanceWallet } from '@mui/icons-material';
+import { TrendingUp, TrendingDown } from '@mui/icons-material';
+import { AreaChart, Area, XAxis, YAxis, ResponsiveContainer, Tooltip as RechartsTooltip } from 'recharts';
 import PriceTracker from './PriceTracker';
 import './DashboardStats.css';
 

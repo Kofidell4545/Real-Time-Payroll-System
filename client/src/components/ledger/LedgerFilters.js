@@ -1,17 +1,14 @@
 import React from 'react';
 import {
-  Paper,
-  Box,
   TextField,
   Stack,
-  useTheme,
+  Paper
 } from '@mui/material';
 import { DatePicker } from '@mui/x-date-pickers/DatePicker';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 
 const LedgerFilters = ({ filters, onFilterChange }) => {
-  const theme = useTheme();
 
   const handleDateChange = (type) => (date) => {
     const newDateRange = [...filters.dateRange];
