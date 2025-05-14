@@ -1,6 +1,7 @@
 [build]
-  command = "npm run build"
+  command = "npm install --legacy-peer-deps && npm run build"
   publish = "build"
+  environment = { NODE_VERSION = "16" }
 
 [[redirects]]
   from = "/*"
