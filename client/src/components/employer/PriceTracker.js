@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import ethLogo from '../../assets/eth-logo.svg';
 import usdcLogo from '../../assets/usdc-logo.svg';
 import './PriceTracker.css';
